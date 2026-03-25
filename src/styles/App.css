@@ -1,0 +1,124 @@
+/* Main App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  color: var(--text-h);
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.app-content {
+  flex: 1;
+  padding: 32px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-add-task {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.btn-add-task:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-add-task:active {
+  transform: translateY(0);
+}
+
+.app-footer {
+  background: var(--social-bg);
+  border-top: 1px solid var(--border);
+  padding: 20px;
+  text-align: center;
+  color: var(--text);
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-header {
+    padding: 32px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 28px;
+  }
+
+  .app-content {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 24px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 24px;
+  }
+
+  .app-header p {
+    font-size: 14px;
+  }
+
+  .app-content {
+    padding: 16px;
+  }
+
+  .btn-add-task {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 20px;
+  }
+
+  .app-content {
+    padding: 12px;
+  }
+}
