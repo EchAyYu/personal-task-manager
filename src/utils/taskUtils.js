@@ -82,8 +82,8 @@ export const filterAndSortTasks = (tasks, searchTerm, statusFilter) => {
   // Sort by deadline (overdue first, then by date, then by status)
   filtered.sort((a, b) => {
     // Overdue tasks first
-    const aOverdue = isOverdue(a.deadline) && a.status !== 'Done' ? 0 : 1;
-    const bOverdue = isOverdue(b.deadline) && b.status !== 'Done' ? 0 : 1;
+    const aOverdue = isOverdue(a) ? 0 : 1;
+    const bOverdue = isOverdue(b) ? 0 : 1;
     if (aOverdue !== bOverdue) return aOverdue - bOverdue;
 
     // Then by deadline
